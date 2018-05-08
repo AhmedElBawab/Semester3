@@ -1,0 +1,38 @@
+package Gui;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
+
+public class Main {
+
+	public static final Logger log = Logger.getLogger(Main.class);
+	public static final Logger logging = Logger.getLogger(ArrayDraw.class);
+	
+	/***
+	 * 
+	 * Use logging instead of printing(System.out.println). in exception, debugging, releasing warnings, etc
+	 * There are 6 logging Use log.debug(Message) for debugging, log.info() for information, log.warn for warnings
+	 * log.error for errors, exceptions log.fatal for problems that may result in closing the program
+	 *
+	 *logging does the same job as printing when you debug your programs or trace it except it does it fast 
+	 *and with the ability to document it or  send it to the destination you want (database, file, console...)
+	 *If you are familiar with javascript it's the same thin as Console.log(Message)
+	 * 
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		log.setLevel(Level.DEBUG);
+		log.debug("Debug Message");
+		log.info("Info Message");
+		log.warn("Warn Message");
+		log.error("Error Message");
+		log.fatal("Fatal Message");
+
+		logging.debug("message");
+		
+		StartWindow s = new StartWindow();
+		s.mainGui();
+		
+	}
+
+}

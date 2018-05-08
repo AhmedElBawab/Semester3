@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;OOP&apos;&#x0D;&#x0A;- Original project: &apos;OOP&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     OOP/src/eg.edu.alexu.csd.oop.draw.cs08&#x0D;&#x0A;     OOP/src/eg.edu.alexu.csd.oop.draw.cs08.controller&#x0D;&#x0A;     OOP/src/eg.edu.alexu.csd.oop.draw.cs08.view" description="Delete elements" element1="/src&lt;eg.edu.alexu.csd.oop.draw.cs08.view" element2="/src&lt;eg.edu.alexu.csd.oop.draw.cs08.controller" element3="/src&lt;eg.edu.alexu.csd.oop.draw.cs08" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1508749665850" subPackages="false" version="1.0"/>
+</session>

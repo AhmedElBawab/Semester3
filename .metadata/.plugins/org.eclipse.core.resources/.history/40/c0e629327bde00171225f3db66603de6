@@ -1,0 +1,85 @@
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.Font;
+
+public class StartWindow {
+
+	private JFrame frame;
+	private ImageIcon img;
+
+	/**
+	 * Launch the application.
+	 */
+	public void mainGui() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StartWindow window = new StartWindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public StartWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(-6, -6, 1380, 740);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(0, 0, 1364, 701);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("");
+		img = new ImageIcon("E:/Mine/Faculty/OOP/Game/res/index.png");
+		lblNewLabel.setIcon(img);
+		lblNewLabel.setBounds(532, 200, 224, 227);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		img = new ImageIcon("E:/Mine/Faculty/OOP/Game/res/logo.png");
+		lblNewLabel_1.setIcon(img);
+		lblNewLabel_1.setBounds(487, 48, 374, 128);
+		panel.add(lblNewLabel_1);
+		
+		JButton btnStartNewGame = new JButton("Start New Game");
+		btnStartNewGame.setForeground(Color.RED);
+		btnStartNewGame.setFont(new Font("Verdana", Font.BOLD, 23));
+		btnStartNewGame.setBounds(290, 559, 287, 41);
+		btnStartNewGame.setContentAreaFilled(false);
+		btnStartNewGame.setFocusPainted(false);
+		btnStartNewGame.setBorderPainted(false);
+		panel.add(btnStartNewGame);
+		
+		JButton btnInstructions = new JButton("Instructions");
+		btnInstructions.setForeground(Color.RED);
+		btnInstructions.setFont(new Font("Verdana", Font.BOLD, 23));
+		btnInstructions.setBounds(765, 559, 279, 41);
+		btnInstructions.setContentAreaFilled(false);
+		btnInstructions.setFocusPainted(false);
+		btnInstructions.setBorderPainted(false);
+		panel.add(btnInstructions);
+		
+	}
+}

@@ -1,0 +1,124 @@
+import java.awt.EventQueue;
+
+import javax.swing.AbstractAction;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
+import javax.swing.JLabel;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class StartWindow {
+
+	private JFrame frame;
+	private ImageIcon img;
+	private JLabel packManPhoto;
+	private JLabel logoPhoto;
+	private JButton btnStartNewGame;
+	private JButton btnInstructions;
+	
+	
+	ActionListener actionListener = new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource() == btnStartNewGame) {
+				
+			}
+			if(e.getSource() == btnInstructions) {
+				JOptionPane.showMessageDialog(null,
+						  "Welcome to our Programme PHPMYADMIN ÈÇáÚÑÈí\n"
+						+ "---------------------------------------------------------------- \n"
+						+ "1-Choose the Shape you want to draw\n"
+						+ "2-click in any palce to choose start point\n"
+						+ "3-Add Shape window will appeare fill it\n"
+						+ "4-Press Enter and watch the shape being drawen\n"
+						+ "5-click on the shape in the layers to Modify it\n"
+						+ "---------------------------------------------------------------- \n"
+						+ "You can also try undo , redo , save and load buttons\n"
+						+ "---------------------------------------------------------------- \n"
+						+ "Feel free to use the programme ^_^", 
+						
+						"Help Box", JOptionPane.INFORMATION_MESSAGE);
+			}
+			}
+		};
+	};
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public void mainGui() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StartWindow window = new StartWindow();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public StartWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(-6, -6, 1380, 740);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(0, 0, 1364, 701);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		packManPhoto = new JLabel("");
+		img = new ImageIcon("E:/Mine/Faculty/OOP/Game/res/index.png");
+		packManPhoto.setIcon(img);
+		packManPhoto.setBounds(532, 200, 224, 227);
+		panel.add(packManPhoto);
+		
+		logoPhoto = new JLabel("");
+		img = new ImageIcon("E:/Mine/Faculty/OOP/Game/res/logo.png");
+		logoPhoto.setIcon(img);
+		logoPhoto.setBounds(487, 48, 374, 128);
+		panel.add(logoPhoto);
+		
+		btnStartNewGame = new JButton("Start Game");
+		btnStartNewGame.setForeground(Color.RED);
+		btnStartNewGame.setFont(new Font("Verdana", Font.BOLD, 23));
+		btnStartNewGame.setBounds(290, 559, 287, 41);
+		btnStartNewGame.setContentAreaFilled(false);
+		btnStartNewGame.setFocusPainted(false);
+		btnStartNewGame.setBorderPainted(false);
+		panel.add(btnStartNewGame);
+		
+		btnInstructions = new JButton("Instructions");
+		btnInstructions.setForeground(Color.RED);
+		btnInstructions.setFont(new Font("Verdana", Font.BOLD, 23));
+		btnInstructions.setBounds(765, 559, 279, 41);
+		btnInstructions.setContentAreaFilled(false);
+		btnInstructions.setFocusPainted(false);
+		btnInstructions.setBorderPainted(false);
+		panel.add(btnInstructions);
+	}
+	
+}

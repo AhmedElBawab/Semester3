@@ -1,0 +1,28 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
+
+public class ArrayDraw extends JPanel {
+	
+	public void drawing() {
+		repaint();
+	}
+
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);		
+		ImageIcon img = new ImageIcon("E:/Mine/Faculty/OOP/Game/res/Bomb-icon.png");
+		JLabel[][] grid= new JLabel[10][10];
+	    for (int i = 10; i < 900; i = i+=32){
+	        for (int j = 10; j < 800; j=j+=32){
+	            img.paintIcon(this, g, i, j);
+	        }
+	    }
+	}
+	
+}
